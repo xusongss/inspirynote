@@ -1,4 +1,4 @@
-# CRC16 使用CRC16-CCITT查表法：
+#  <span id="CRC16-CCITT">CRC16-CCITT</span>
 ```
 static unsigned short ccitt_table[256] = {
 0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50A5, 0x60C6, 0x70E7,
