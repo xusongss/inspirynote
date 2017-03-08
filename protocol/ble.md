@@ -13,7 +13,6 @@
     * [TYPE := set  (属性列表)](#type-set-属性列表属性列表)
     * [TYPE := ack](#type-ack)
   * [属性列表](#span-id-属性列表属性列表span)
-  * [语音示例](#语音示例)
 * [CRC16-CCITT](#span-idcrc16-ccittcrc16-ccittspan)
 
 <!-- tocstop -->
@@ -24,7 +23,7 @@
 ## 修订记录
 |协议版本|日期|章节|说明|
 | ------ | ------ | ------ | ------ |
-|0x02| 2017/03/08| | 增加了get，set方法，以及ack|
+|0x01| 2017/03/08| | 增加了get，set方法，以及ack|
 ## Package基本结构：
 ```
 ------------------------
@@ -34,8 +33,8 @@ TYPE：四个bit，数据类型
 VER：四个bit，版本号
 ```
 ```
-TYPE := audio | get | set | ack
-VER := 0x02
+TYPE    := audio | get | set | ack
+VER     := 0x01
 audio   := 0x01
 get     := 0x02
 set     := 0x03
@@ -95,17 +94,7 @@ DATA := OCTETSTRING "\r\n"
 |属性名称|读写|类型|
 | ------ | ------ | ------ |
 |Device.DeviceInfo.SerialNumber|R|STRING|
-## 语音示例
-| audio_N | 提示音 |  使用场景|
-| ------ | ------ | ------ |
-|audio_1|  连接成功 | 连接成功/测试|
-|audio_2|请扫码 |准备好了等待付款|
-|audio_3|请扫微信支付二维码 |微信支付准备等待扫码|
-|audio_4| 请扫支付宝付款二维码|支付宝准备等待扫码|
-|audio_5| 扫码成功，正在扣款|扫码成功后发起支付|
-|audio_6| 二维码过期，请重新扫码|二维码过期|
-|audio_7| 余额不足，请更换银行卡重新扫码|余额不足|
-|audio_8| 支付失败，请重新扫码|支付失败|
-|audio_9| 支付成功|支付成功|
+
+
 
 @import "CRC16-CCITT.md"

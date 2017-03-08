@@ -15,7 +15,7 @@
     * [交互示例](#交互示例)
     * [超时处理：](#超时处理)
     * [SEQ字段：](#seq字段)
-* [CRC16 使用CRC16-CCITT查表法：](#crc16-使用crc16-ccitt查表法)
+* [CRC16-CCITT](#span-idcrc16-ccittcrc16-ccittspan)
 
 <!-- tocstop -->
 
