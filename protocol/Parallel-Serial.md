@@ -15,7 +15,7 @@
     * [交互示例](#交互示例)
     * [超时处理：](#超时处理)
     * [SEQ字段：](#seq字段)
-* [CRC16-CCITT](#span-idcrc16-ccittcrc16-ccittspan)
+* [CRC32](#span-idcrc32crc32span)
 
 <!-- tocstop -->
 
@@ -108,4 +108,4 @@ RECEIVER ->>SENDER :ACK 0XF0
 
 ### SEQ字段：
 	SYNC 包初始化seq,  DATA 和 EOF 包采用循环递增方式产生该字段
-@import "CRC16-CCITT.md"
+@import "CRC32.md"

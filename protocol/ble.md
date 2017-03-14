@@ -3,27 +3,30 @@
 
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
+* [修订记录](#修订记录)
 * [第一节 链路数据包结构（Base Package）](#第一节-链路数据包结构base-package)
   * [Base Package结构](#base-package结构)
 * [第二节 指令传输（TYPE=0x02）](#第二节-指令传输type0x02)
-  * [修订记录](#修订记录)
   * [Package基本结构：](#package基本结构)
     * [TYPE := audio](#type-audio)
     * [TYPE := get (属性列表)](#type-get-属性列表属性列表)
     * [TYPE := set  (属性列表)](#type-set-属性列表属性列表)
     * [TYPE := ack](#type-ack)
   * [属性列表](#span-id-属性列表属性列表span)
+  * [语音列表](#语音列表)
 * [CRC16-CCITT](#span-idcrc16-ccittcrc16-ccittspan)
 
 <!-- tocstop -->
-
-@import "BaseProtocol.md"
-# 第二节 指令传输（TYPE=0x02）
-- 本节定义的结构对应第一节DATA部分
-## 修订记录
+# 修订记录
 |协议版本|日期|章节|说明|
 | ------ | ------ | ------ | ------ |
-|0x01| 2017/03/08| | 增加了get，set方法，以及ack|
+|0x01| 2017/03/14| 第二节 | 增加语音列表|
+|0x01| 2017/03/08| 第二节 | 增加get，set方法，以及ack|
+
+@import "BaseProtocol.md"
+>* 注意CRC部分使用crc16, 两个字节
+# 第二节 指令传输（TYPE=0x02）
+- 本节定义的结构对应第一节DATA部分
 ## Package基本结构：
 ```
 ------------------------
@@ -94,7 +97,8 @@ DATA := OCTETSTRING "\r\n"
 |属性名称|读写|类型|
 | ------ | ------ | ------ |
 |Device.DeviceInfo.SerialNumber|R|STRING|
-
+## 语音列表
+@import "audio.md"
 
 
 @import "CRC16-CCITT.md"
